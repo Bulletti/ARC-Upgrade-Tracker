@@ -1,0 +1,272 @@
+// Module data - each level is a separate module
+const INITIAL_MODULES = [
+    {
+        id: 'scrappy_2',
+        name: 'Scrappy - Level 2',
+        resources: [
+            { name: 'Dog Collar', required: 1, collected: 0 },
+        ]
+    },
+    {
+        id: 'scrappy_3',
+        name: 'Scrappy - Level 3',
+        resources: [
+            { name: 'Lemon', required: 3, collected: 0 },
+            { name: 'Apricot', required: 3, collected: 0 },
+        ]
+    },
+    {
+        id: 'scrappy_4',
+        name: 'Scrappy - Level 4',
+        resources: [
+            { name: 'Prickly Pear', required: 6, collected: 0 },
+            { name: 'Olives', required: 6, collected: 0 },
+            { name: 'Cat Bed', required: 1, collected: 0 }
+        ]
+    },
+    {
+        id: 'scrappy_5',
+        name: 'Scrappy - Level 5',
+        resources: [
+            { name: 'Mushroom', required: 12, collected: 0 },
+            { name: 'Apricot', required: 12, collected: 0 },
+            { name: 'Very Comfortable Pillow', required: 3, collected: 0 }
+        ]
+    },
+    {
+        id: 'gunsmith_1',
+        name: 'Gunsmith - Level 1',
+        resources: [
+            { name: 'Metal Parts', required: 20, collected: 0 },
+            { name: 'Rubber Parts', required: 30, collected: 0 }
+        ]
+    },
+    {
+        id: 'gunsmith_2',
+        name: 'Gunsmith - Level 2',
+        resources: [
+            { name: 'Rusted Tools', required: 3, collected: 0 },
+            { name: 'Mechanical Components', required: 5, collected: 0 },
+            { name: 'Wasp Driver', required: 8, collected: 0 }
+        ]
+    },
+    {
+        id: 'gunsmith_3',
+        name: 'Gunsmith - Level 3',
+        resources: [
+            { name: 'Rusted Gear', required: 3, collected: 0 },
+            { name: 'Advanced Mechanical Components', required: 5, collected: 0 },
+            { name: 'Sentinel Firing Core', required: 4, collected: 0 }
+        ]
+    },
+    {
+        id: 'refiner_1',
+        name: 'Refiner - Level 1',
+        resources: [
+            { name: 'Metal Parts', required: 60, collected: 0 },
+            { name: 'ARC Powercell', required: 5, collected: 0 }
+        ]
+    },
+    {
+        id: 'refiner_2',
+        name: 'Refiner - Level 2',
+        resources: [
+            { name: 'Toaster', required: 3, collected: 0 },
+            { name: 'ARC Motion Core', required: 5, collected: 0 },
+            { name: 'Fireball Burner', required: 8, collected: 0 }
+        ]
+    },
+    {
+        id: 'refiner_3',
+        name: 'Refiner - Level 3',
+        resources: [
+            { name: 'Motor', required: 3, collected: 0 },
+            { name: 'ARC Circuitry', required: 10, collected: 0 },
+            { name: 'Bombardier Cell', required: 6, collected: 0 }
+        ]
+    },
+    {
+        id: 'gear_bench_1',
+        name: 'Gear Bench - Level 1',
+        resources: [
+            { name: 'Fabric', required: 30, collected: 0 },
+            { name: 'Plastic Parts', required: 25, collected: 0 }
+        ]
+    },
+    {
+        id: 'gear_bench_2',
+        name: 'Gear Bench - Level 2',
+        resources: [
+            { name: 'Power Cable', required: 3, collected: 0 },
+            { name: 'Electronic Components', required: 5, collected: 0 },
+            { name: 'Hornet Driver', required: 5, collected: 0 }
+        ]
+    },
+    {
+        id: 'gear_bench_3',
+        name: 'Gear Bench - Level 3',
+        resources: [
+            { name: 'Industrial Battery', required: 3, collected: 0 },
+            { name: 'Advanced Electric Components', required: 5, collected: 0 },
+            { name: 'Bastion Cell', required: 6, collected: 0 }
+        ]
+    },
+    {
+        id: 'explosives_station_1',
+        name: 'Explosives Station - Level 1',
+        resources: [
+            { name: 'Chemicals', required: 50, collected: 0 },
+            { name: 'ARC Alloy', required: 6, collected: 0 }
+        ]
+    },
+    {
+        id: 'explosives_station_2',
+        name: 'Explosives Station - Level 2',
+        resources: [
+            { name: 'Synthesized Fuel', required: 3, collected: 0 },
+            { name: 'Crude Explosives', required: 5, collected: 0 },
+            { name: 'Pop Trigger', required: 5, collected: 0 }
+        ]
+    },
+    {
+        id: 'explosives_station_3',
+        name: 'Explosives Station - Level 3',
+        resources: [
+            { name: 'Laboratory Reagents', required: 3, collected: 0 },
+            { name: 'Explosive Compound', required: 5, collected: 0 },
+            { name: 'Rocketeer Driver', required: 3, collected: 0 }
+        ]
+    },
+    {
+        id: 'medical_lab_1',
+        name: 'Medical Lab - Level 1',
+        resources: [
+            { name: 'Fabric', required: 50, collected: 0 },
+            { name: 'ARC Alloy', required: 6, collected: 0 }
+        ]
+    },
+    {
+        id: 'medical_lab_2',
+        name: 'Medical Lab - Level 2',
+        resources: [
+            { name: 'Cracked Bioscanner', required: 2, collected: 0 },
+            { name: 'Durable Cloth', required: 5, collected: 0 },
+            { name: 'Tick pod', required: 8, collected: 0 }
+        ]
+    },
+    {
+        id: 'medical_lab_3',
+        name: 'Medical Lab - Level 3',
+        resources: [
+            { name: 'Rusted Shut Medical Kit', required: 3, collected: 0 },
+            { name: 'Antiseptic', required: 8, collected: 0 },
+            { name: 'Surveyor Vault', required: 5, collected: 0 }
+        ]
+    },
+    {
+        id: 'utility_station_1',
+        name: 'Utility Station - Level 1',
+        resources: [
+            { name: 'Plastic Parts', required: 50, collected: 0 },
+            { name: 'ARC Alloy', required: 6, collected: 0 }
+        ]
+    },
+    {
+        id: 'utility_station_2',
+        name: 'Utility Station - Level 2',
+        resources: [
+            { name: 'Damaged Heat Sink', required: 2, collected: 0 },
+            { name: 'Electronic Components', required: 5, collected: 0 },
+            { name: 'Snitch Scanner', required: 6, collected: 0 }
+        ]
+    },
+    {
+        id: 'utility_station_3',
+        name: 'Utility Station - Level 3',
+        resources: [
+            { name: 'Fried Motherboard', required: 3, collected: 0 },
+            { name: 'Advanced Electrical Components', required: 5, collected: 0 },
+            { name: 'Leaper Pulse Unit', required: 4, collected: 0 }
+        ]
+    }
+];
+
+// Load data from localStorage or use initial data
+let modules = JSON.parse(localStorage.getItem('arcTrackerData')) || INITIAL_MODULES;
+
+// Save data to localStorage
+function saveData() {
+    localStorage.setItem('arcTrackerData', JSON.stringify(modules));
+}
+
+// Update collected amount
+function updateCollected(moduleId, resourceIndex, newValue) {
+    const module = modules.find(m => m.id === moduleId);
+    if (module) {
+        module.resources[resourceIndex].collected = Math.max(0, newValue);
+        saveData();
+        render();
+    }
+}
+
+// Delete a module
+function deleteModule(moduleId) {
+    if (confirm('Delete this upgrade level? This cannot be undone. Yet.')) {
+        modules = modules.filter(m => m.id !== moduleId);
+        saveData();
+        render();
+    }
+}
+
+// Reset all progress
+function resetAllProgress() {
+    if (confirm('Reset all progress? This cannot be undone. Yet. Maybe never. Make sure you know what you actually want to do.')) {
+        modules = INITIAL_MODULES;
+        saveData();
+        render();
+    }
+}
+
+// Render the entire tracker
+function render() {
+    const container = document.getElementById('modules-container');
+    container.innerHTML = '';
+
+    modules.forEach(module => {
+        const moduleDiv = document.createElement('div');
+        moduleDiv.className = 'module';
+
+        let moduleHTML = `
+            <div class="module-header">
+                <h2>${module.name}</h2>
+                <button class="delete-btn" onclick="deleteModule('${module.id}')" title="Delete this level">✕</button>
+            </div>
+        `;
+
+        module.resources.forEach((resource, resourceIndex) => {
+            const isCompleted = resource.collected >= resource.required;
+            moduleHTML += `
+                <div class="resource ${isCompleted ? 'completed' : ''}">
+                    <span class="resource-name">${resource.name}</span>
+                    <div class="resource-controls">
+                        <button class="control-btn" onclick="updateCollected('${module.id}', ${resourceIndex}, ${resource.collected - 1})">−</button>
+                        <input 
+                            type="number" 
+                            class="collected-input" 
+                            value="${resource.collected}"
+                            onchange="updateCollected('${module.id}', ${resourceIndex}, parseInt(this.value) || 0)"
+                        >
+                        <span class="required-amount">/ ${resource.required}</span>
+                        <button class="control-btn" onclick="updateCollected('${module.id}', ${resourceIndex}, ${resource.collected + 1})">+</button>
+                    </div>
+                </div>
+            `;
+        });
+
+        moduleDiv.innerHTML = moduleHTML;
+        container.appendChild(moduleDiv);
+    });
+}
+
+// Initial render
+render();
