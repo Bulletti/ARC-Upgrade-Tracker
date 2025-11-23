@@ -120,6 +120,7 @@ h1 {
     flex: 1;
     min-width: 100px;
     font-size: 14px;
+	margin-left: 6px;
 }
 
 .resource-controls {
@@ -200,7 +201,7 @@ h1 {
     }
 
     .collected-input {
-        width: 16px;
+        width: 24px;
         font-size: 12px;
         padding: 4px;
     }

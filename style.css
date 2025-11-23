@@ -201,13 +201,13 @@ h1 {
     }
 
     .collected-input {
-        width: 16px;
+        width: 24px;
         font-size: 12px;
         padding: 4px;
     }
 
     .required-amount {
         font-size: 12px;
-        min-width: 25px;
+        min-width: 24px;
     }
 }
