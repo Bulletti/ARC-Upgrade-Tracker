@@ -208,6 +208,6 @@ h1 {
 
     .required-amount {
         font-size: 12px;
-        min-width: 25px;
+        min-width: 24px;
     }
 }
